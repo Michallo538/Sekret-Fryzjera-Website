@@ -3,7 +3,58 @@ html {
     width: 100%;
     height: 100%;
     background-color: white;
-    background-image: url(/Images/znak\ wodny\ duzy\ biały.png);
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+
+li,
+a {
+    font-style: italic;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    text-decoration: none;
+}
+
+a {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: black;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: gray
+}
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: gray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: darkgray;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
 }
 
 .main-container {
@@ -12,7 +63,7 @@ html {
     height: 15px;
     padding: 25px 25px 25px;
     padding-bottom: 45px;
-    ;
+
 }
 
 .nav-button {
@@ -31,11 +82,232 @@ html {
 }
 
 .salon-image {
-    align-items: center;
-    align-content: center;
-    max-width: 100%;
-    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
     filter: none;
     -webkit-filter: grayscale(100%);
 
+}
+
+.services-container {
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+}
+
+.service-individual {
+    display: inline-block;
+    left: 30%;
+    position: relative;
+}
+
+.about-contrainer {
+    display: flex;
+    position: relative;
+    margin: auto;
+    right: 50%;
+
+
+}
+
+.about-image {
+    position: relative;
+    display: flex;
+    position: absolute;
+    right: 0;
+
+}
+
+#homepage-about {
+    background-color: lightgray;
+}
+
+.responsive-image {
+    max-width: 200px;
+    max-height: 200PX;
+    width: 100%;
+    height: auto;
+
+}
+
+.homepage-about {
+    display: flex;
+    align-items: center;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    background-color: lightgray;
+
+}
+
+.center-about-div {
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: top;
+    position: relative;
+    padding-left: 25%;
+}
+
+.center-about-image {
+    max-width: 450px;
+    max-height: 500px;
+    display: inline-block;
+
+}
+
+.center-about-text {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+
+}
+
+
+
+.teamshow-container {
+    position: relative;
+    width: 50%;
+}
+
+.teamshow-text {
+    position: relative;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5%;
+}
+
+
+.TeamPhotos {
+    width: 400px;
+    height: auto;
+    opacity: 1;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    filter: none;
+    -webkit-filter: grayscale(100%);
+}
+
+.TeamPhotos-Images {
+    width: 400px;
+    height: 400px;
+
+
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.TeamPhotos-Images:hover .TeamPhotos {
+    opacity: 0.6;
+}
+
+.TeamPhotos-Images:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: aquamarine;
+    color: black;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+.card-footer {
+    position: relative;
+    background-color: lightgray;
+
+}
+
+.Footer-Description {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 0px 20px 20px 20px;
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.icons {
+    display: flex;
+    column-gap: 25px;
+    justify-content: center;
+    align-content: center;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
+    color: #fff;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: .25s;
+}
+
+.icon:hover {
+    outline-offset: 4px;
+}
+
+.icon:hover i {
+    animation: shake .25s;
+}
+
+.icon--facebook:hover {
+    background-image: radial-gradient(circle at 30% 107%, #3C5998 5%, #8B9DC3 15%, #DFE3EE 50%, #5773F2 90%);
+    background-color: #7256be;
+}
+
+
+.icon--instagram:hover {
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    outline-color: #a02d76;
+}
+
+.icon--tiktok:hover {
+    background-image: radial-gradient(circle at 30% 107%, #16DDDC 0%, #77809F 5%, #D72463 90%);
+    background-color: #d6249f;
+}
+
+
+.icon--booksy:hover {
+    background-image: radial-gradient(circle at 30% 107%, #000000 5%, #05cfa6 20%, #05cf02 20%, white 90%);
+    background-color: #16DDDC;
+}
+
+.icon--google:hover {
+    background-image: radial-gradient(circle at -40% 107%, #4285F4 5%, #DB4437 35%, #F4B400 60%, #0F9D58 90%);
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+    }
 }
