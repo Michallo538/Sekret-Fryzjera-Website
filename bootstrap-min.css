@@ -60,11 +60,6 @@
     --bs-body-bg: #fff
 }
 
-*,
-::after,
-::before {
-    box-sizing: border-box
-}
 
 @media (prefers-reduced-motion:no-preference) {
     :root {

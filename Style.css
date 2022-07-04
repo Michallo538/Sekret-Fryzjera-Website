@@ -8,6 +8,10 @@ html {
     color: black;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 
 li,
 a {
@@ -29,6 +33,16 @@ a {
     color: black;
     text-decoration: none;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.main-title {
+    position: relative;
+    padding-top: 1%;
+    left: 19%;
+    width: fit-content;
+    font-size: 30px;
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .nav-link:focus,
@@ -224,7 +238,7 @@ a {
 }
 
 .card-footer {
-    position: relative;
+
     background-color: lightgray;
 
 }
@@ -232,10 +246,11 @@ a {
 .Footer-Description {
     display: flex;
     position: relative;
-    justify-content: center;
+    justify-content: left;
     padding: 0px 20px 20px 20px;
     font-size: x-large;
     font-weight: 400;
+    padding-bottom: 5px;
 }
 
 .icons {
@@ -259,6 +274,7 @@ a {
     transition-property: outline-offset, outline-color, background-color;
     transition-duration: .25s;
 }
+
 
 .icon:hover {
     outline-offset: 4px;
@@ -310,4 +326,139 @@ a {
     40% {
         transform: rotate(-15deg);
     }
+}
+
+
+
+.footer-map{
+    right: 0px;
+    position: sticky;
+}
+.slideshow {
+    list-style-type: none;
+}
+
+/** SLIDESHOW **/
+.slideshow,
+.slideshow:after {
+
+    position: flex;
+    justify-content: center;
+    justify-items: center;
+
+    z-index: 0;
+}
+
+.slideshow li span {
+    position: absolute;
+    width: 65%;
+    height: 62%;
+    left: 18%;
+    top: 7%;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 30s linear infinite 0s;
+    filter: grayscale(100%);
+}
+
+.slideshow li:nth-child(1) span {
+    background-image: url(/Images/SlideShowImages/SalonPhoto1.jpg);
+}
+
+.slideshow li:nth-child(2) span {
+    background-image: url("/Images/SlideShowImages/Salonphoto2.jpg");
+    animation-delay: 6s;
+}
+
+.slideshow li:nth-child(3) span {
+    background-image: url("/Images/SlideShowImages/SalonPhoto3.jpg");
+    animation-delay: 12s;
+}
+
+.slideshow li:nth-child(4) span {
+    background-image: url("/Images/SlideShowImages/SalonPhoto4.jpg");
+    animation-delay: 18s;
+}
+
+.slideshow li:nth-child(5) span {
+    background-image: url("/Images/SlideShowImages/SalonPhoto5.jpg");
+    animation-delay: 24s;
+}
+
+.slideshow li:nth-child(6) span {
+    background-image: url("/Images/SlideShowImages/SalonPhoto6.jpg");
+    animation-delay: 30s;
+}
+
+.slideshow li:nth-child(7) span {
+    background-image: url("/Images/SlideShowImages/SalonPhoto7.jpg");
+    animation-delay: 36s;
+}
+
+.slideshow li:nth-child(8) span {
+    background-image: url("/Images/SlideShowImages/SalonPhoto8.jpg");
+    animation-delay: 42s;
+}
+
+.slideshow li:nth-child(9) span {
+    background-image: url("/Images/SlideShowImages/SalonPhoto9.jpg");
+    animation-delay: 48s;
+}
+
+
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+
+    8% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+
+    17% {
+        opacity: 1
+    }
+
+    25% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+
+@keyframes titleAnimation {
+    0% {
+        opacity: 0
+    }
+
+    8% {
+        opacity: 1
+    }
+
+    17% {
+        opacity: 1
+    }
+
+    19% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+
+.no-cssanimations .cb-slideshow li span {
+    opacity: 1;
 }
