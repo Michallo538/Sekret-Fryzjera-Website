@@ -671,7 +671,11 @@ progress {
     margin-right: auto;
     margin-left: auto
 }
-
+@media (max-width:700px){
+    .container-fluid{
+            font-size: 20px;
+    }
+}
 @media (min-width:576px) {
 
     .container,
