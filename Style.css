@@ -12,8 +12,40 @@ html {
     box-sizing: border-box;
 }
 
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
 
-.wrapper{
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+
+.wrapper {
     position: fixed;
     inset: 0px;
     z-index: 9999;
@@ -21,9 +53,40 @@ html {
     display: grid;
     place-items: center;
     transition: opacity .50s, visibility 1s;
-    
 }
-.fade{
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid rgb(111, 196, 196);
+    border-bottom: 16px solid rgb(110, 191, 194);
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.fade {
     opacity: 0;
     visibility: hidden;
 }
@@ -154,14 +217,15 @@ a:hover {
 
 }
 
-.services-container {
+.services-containeri {
     justify-content: center;
     font-size: 30px;
     font-weight: bold;
     display: flex;
 }
 
-.service-individual {
+.service-individuali
+ {
     display: inline-block;
     position: relative;
     display: inline-block;
@@ -172,7 +236,7 @@ a:hover {
     padding: 30px;
 }
 
-.service-list {
+.service-listi {
     display: flex;
     justify-content: center;
 }
@@ -265,6 +329,7 @@ a:hover {
         display: flex;
     }
 }
+
 @media (max-width:1400px) {
     .about-businessfeature-container {
         display: block;
@@ -612,17 +677,19 @@ h2 {
 
 
 
-.footer-map  iframe{
+.footer-map iframe {
     display: block;
     width: 1000px;
     height: 400px;
 }
-@media (max-width:1000px){
+
+@media (max-width:1000px) {
     .footer-map iframe {
         width: 350px;
         height: 300px;
     }
 }
+
 .slideshow {
     list-style-type: none;
 }
@@ -827,6 +894,7 @@ h2 {
 }
 
 .button-86 {
+
     top: 5%;
     all: unset;
     width: 100px;
@@ -919,7 +987,75 @@ h2 {
 }
 
 
-.main-services-container{
-    width:100%;
+.services-main-container {
+    width: 100%;
     height: auto;
+}
+
+.services-list {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+
+}
+@media (max-width: 1200px){
+    .services-list, .service-individual{
+        display: grid;
+        float: right;
+        height: auto;
+        justify-content: center;
+        
+    }    
+}
+@media (max-width: 1200px){
+     .service-individual, .service-image{
+        display: grid;
+        float: right;
+        height: min-content;
+        width: min-content;
+
+    }    
+}
+@media (max-width: 1200px){
+      .service-image{
+        display: block;
+        float: right;
+        height: auto;
+        width: 200px;
+        justify-content: center;
+    }    
+}
+.service-individual {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    height: auto;
+    margin: 15px;
+    background-color: lightgray;
+    transition: 1.5s;
+    width: 350px;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.service-image {
+    max-width: 200px;
+    max-height: 200px;
+    transition: transform .2s;
+    justify-content: center;
+}
+
+
+.service-individual:hover {
+    transform: scale(1.5);
+    transition: .25s;
+    background-color: gray;
+    transform: scale(1.02);
 }
