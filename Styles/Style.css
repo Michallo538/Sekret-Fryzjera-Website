@@ -269,8 +269,11 @@ a:hover {
 }
 
 .service-icon-stylizacja {
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 120px;
+    opacity: 80%;
+    
+
 }
 
 .service-icon-koloryzacja {
@@ -287,8 +290,9 @@ a:hover {
 
 @media(max-width:700px) {
     .service-icon-stylizacja {
-        width: 80px;
-        height: 73px;
+        width: 70px;
+        height: 64px;
+        opacity: 80%;
     }
 }
 
