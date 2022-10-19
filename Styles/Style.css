@@ -4,20 +4,37 @@ html {
     height: 100%;
     background-color: white;
     scroll-behavior: smooth;
-    font-family: Arial, Helvetica, sans-serif;
     color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 * {
     box-sizing: border-box;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--font-color);
+}
+
+a {
+    color: var(--font-color);
+}
+
+p {
+    color: var(--font-color);
+}
+
 .animate-bottom {
-    position: relative;
+
     -webkit-animation-name: animatebottom;
     -webkit-animation-duration: 1s;
     animation-name: animatebottom;
-    animation-duration: 1s
+    animation-duration: 1s;
+    background: var(--color-secondary);
 }
 
 @-webkit-keyframes animatebottom {
@@ -95,16 +112,11 @@ html {
 li,
 a {
     font-style: italic;
-    color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: larger;
     text-decoration: none;
+    color: var(--font-color)
 }
 
-a {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
 
 a:hover {
     color: gray;
@@ -113,7 +125,7 @@ a:hover {
 .nav-link {
     display: block;
     padding: 0.5rem 1rem;
-    color: black;
+    color: var(--font-color);
     text-decoration: none;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
@@ -125,7 +137,7 @@ a:hover {
     left: 19%;
     font-size: 30px;
     font-style: oblique;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--font-color);
 }
 
 .nav-link:focus,
@@ -212,8 +224,8 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    filter: none;
-    -webkit-filter: grayscale(100%);
+
+    filter: var(--imggrayscale);
 
 }
 
@@ -222,6 +234,7 @@ a:hover {
     font-size: 30px;
     font-weight: bold;
     display: flex;
+    color: var(--font-color)
 }
 
 @media (max-width:800px) {
@@ -264,22 +277,23 @@ a:hover {
 }
 
 .service-icon-strzyzenie {
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
+    opacity: 80%;
 }
 
 .service-icon-stylizacja {
     width: 125px;
     height: 120px;
     opacity: 80%;
-    
-
 }
 
 .service-icon-koloryzacja {
-    width: 170px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
+    opacity: 80%;
 }
+
 
 @media(max-width:700px) {
     .service-icon-strzyzenie {
@@ -335,9 +349,6 @@ a:hover {
 }
 
 
-#homepage-about {
-    background-color: lightgray;
-}
 
 .about-businessfeature-container {
     width: 100%;
@@ -365,7 +376,7 @@ a:hover {
 .about-businessfeature-title {
     text-align: center;
     font-size: 50px;
-    color: black;
+    color: var(--font-color);
 }
 
 .about-businessfeature-button-container {
@@ -437,8 +448,7 @@ a:hover {
     flex: wrap;
     align-items: center;
     vertical-align: middle;
-    background-color: lightgray;
-
+    background-color: var(--homepage-about);
 }
 
 
@@ -452,6 +462,7 @@ a:hover {
 .center-about-image {
     height: auto;
     width: 100%;
+    filter: var(--imggrayscale);
 
 }
 
@@ -469,7 +480,7 @@ a:hover {
 .main-banner-text-image,
 h1,
 h2 {
-    font-size: 80px;
+    font-size: 50px;
 }
 
 @media (max-width:700px) {
@@ -485,7 +496,7 @@ h2 {
     .main-banner-text-image,
     h1,
     h2 {
-        font-size: 60px;
+        font-size: 40px;
     }
 }
 
@@ -494,7 +505,7 @@ h2 {
     .main-banner-text-image,
     h1,
     h2 {
-        font-size: 45px;
+        font-size: 30px;
     }
 }
 
@@ -503,7 +514,7 @@ h2 {
     .main-banner-text-image,
     h1,
     h2 {
-        font-size: 35px;
+        font-size: 25px;
     }
 }
 
@@ -521,7 +532,7 @@ h2 {
     .main-banner-text-image,
     h1,
     h2 {
-        font-size: 15px;
+        font-size: 20px;
     }
 }
 
@@ -536,7 +547,7 @@ h2 {
     text-align: center;
     width: 100%;
     font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     padding-left: 5%;
 }
 
@@ -549,7 +560,6 @@ h2 {
     transition: .5s ease;
     backface-visibility: hidden;
     filter: none;
-    -webkit-filter: grayscale(100%);
 
 }
 
@@ -623,6 +633,7 @@ h2 {
     font-size: x-large;
     font-weight: 400;
     padding-bottom: 5px;
+    color: var(--font-color);
 }
 
 .icons {
@@ -744,7 +755,7 @@ h2 {
     opacity: 0;
     z-index: 0;
     animation: imageAnimation 30s linear infinite 0s;
-    filter: grayscale(100%);
+    filter: var(--imggrayscale)
 }
 
 .slideshow li:nth-child(1) span {
@@ -907,7 +918,7 @@ h2 {
     display: block;
     font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    color: var(--font-color)
 }
 
 
@@ -917,6 +928,7 @@ h2 {
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 20px;
+    color: var(--font-color);
 }
 
 .button-86 {
@@ -956,7 +968,7 @@ h2 {
     transform: translate(0%, 0%);
     width: 100%;
     height: 100%;
-    background: #28282d;
+    background: var(--color-accent);
     border-radius: 10px;
 }
 
@@ -1023,8 +1035,7 @@ h2 {
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
+    flex-wrap: wrap;
     padding-top: 30px;
 
 }
@@ -1069,7 +1080,7 @@ h2 {
     align-content: center;
     align-self: center;
     margin: 15px;
-    background-color: lightgray;
+    background-color: var(--color-servicelist);
     transition: 1.5s;
     width: 350px;
     height: 250px;
@@ -1091,4 +1102,146 @@ h2 {
     transition: .25s;
     background-color: gray;
     transform: scale(1.02);
+}
+
+
+/**/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.theme-light {
+    --color-primary: #0060df;
+    --color-secondary: #fbfbfe;
+    --color-accent: #fd6f53;
+    --font-color: #000000;
+    --svg-color: black;
+    --homepage-about: lightgray;
+    --imggrayscale: grayscale(100%);
+    --color-servicelist: darkgray;
+    --imglogo: none;
+}
+
+.theme-dark {
+    --color-primary: #17ed90;
+    --color-secondary: #2a2c2d;
+    --color-accent: #12cdea;
+    --font-color: #ffffff;
+    --svg-color: #ffffff;
+    --homepage-about: #2A2726;
+    --imggrayscale: none;
+    --color-servicelist: #A39691;
+    --imglogo: invert(100%)
+}
+
+path {
+    fill: var(--svg-color);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    color: var(--font-color);
+    font-family: sans-serif;
+}
+
+.container button {
+    color: var(--font-color);
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    left: 0px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: white url('https://i.ibb.co/FxzBYR9/night.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input:checked+.slider {
+    background-color: #2196f3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+    background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+strong {
+    color: var(--font-color)
+}
+.logobrand{
+    filter: var(--imglogo);
+}
+.navbar-brand{
+    filter: var(--imglogo);
 }
