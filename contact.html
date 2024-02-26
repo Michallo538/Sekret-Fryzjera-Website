@@ -20,21 +20,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="Styles/app.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-307WN8EFW5"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-307WN8EFW5');
-    </script>
     <script>
         // function to set a given theme/color-scheme
         function setTheme(themeName) {
@@ -58,10 +47,58 @@
             }
         })();
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5244287313607128"
-        crossorigin="anonymous"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'wait_for_update': 500,
+        });
+        gtag('js', new Date());
+        gtag('config', 'G-3298J3VE92');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var consentOverlay = document.getElementById("consentOverlay");
+            var agreeButton = document.getElementById("agreeButton");
+
+            // Show the consent overlay
+            consentOverlay.style.display = "block";
+
+            // Handle click on "I Agree" button
+            agreeButton.addEventListener("click", function () {
+                // Hide the consent overlay
+                consentOverlay.style.display = "none";
+
+                // Set a flag or store in local storage to indicate consent has been given
+                localStorage.setItem("consentGiven", "true");
+
+                // Add your Google Tag Manager initialization code here
+                // This ensures that GTM is loaded only after the user has given consent
+                // For example:
+                // loadGoogleTagManager();
+            });
+        });
+
+        // Load gtag.js script.
+        var gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-3298J3VE92';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(gtagScript, firstScript);
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-3298J3VE92');
+    </script>
 </head>
-<!-- Nav bar-->
 
 <body>
 
@@ -80,7 +117,7 @@
                 <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
                     <ul style="display: inline-flex; list-style-type:none;" class="p-3 navbar-nav right " id="home">
                         <li class="nav-item active">
-                            <a class="nav-link" href="">O nas</a>
+                            <a class="nav-link" href="/about.html">O nas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/services.html">Usługi</a>
@@ -298,7 +335,7 @@
             <div class="container" style="margin-top: 15px;">
                 <div style="display:inline-flex" class="d-flex justify-content-center align-content-center ">
                     <p>Stworzone przez <a class="h6" style="text-decoration: none;"
-                            href="https://www.facebook.com/profile.php?id=100004472498489">Michal
+                            href="https://www.linkedin.com/in/michal-mazur-3a9836189/">Michal
                             Mazur</a>
                         <a href="https://www.buymeacoffee.com/michalmazur5"> <img style="  width: 25px; height: 30px;"
                                 src="/Images/coffeeecupimage.svg">
